@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HäviExpress Ota yhteyttä</title>
+    <link rel="shortcut icon" href="../pyöreälogo.png" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../pyöreälogo.png" alt="HäviExpressLogo" class="center-image">
+      
+            <h1><a href="../index.html">HäviExpress</a></h1>
+            <a class="hamburger-menu">&#9776;</a>
+
+<nav>
+  <a href="../index.html">Etusivu</a>
+  <a href="tilaaminen.html">Tilaaminen</a>
+  <a href="valikoima.html">Valikoima</a>
+<a href="otayhteytta.html">Ota yhteyttä</a>
+<a href="../english/contactus.html">In English</a>
+</nav>
+
+    </header>
+
+ <section class="feedback" id="feedbackSection">
+        <h2>Anna palautetta</h2>
+        <form id="feedbackForm" onsubmit="submitFeedback(event)">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="feedback">Palautteesi:</label>
+            <textarea id="feedback" name="feedback"></textarea>
+
+            <button type="submit">Lähetä!</button>
+        </form>
+
+        <p id="thankYouMessage" style="display:none;">Kiitos palautteestasi!</p>
+    </section>
+
+    <section class="contact">
+        <h2>Yhteystiedot</h2>
+        <div id="tiimi">
+    <h3>Toimitusjohtaja - Meri Riihinen - meri.riihinen@haviexpress.fi</h3>
+    <h3>Myyntijohtaja - Viivi Kalliolepo - viivi.kalliolepo@haviexpress.fi</h3>
+    <h3>Talousjohtaja - Teemu Uusi-Eskola - teemu.uusieskola@haviexpress.fi</h3>
+    <h3>Operatiivinen johtaja - Eetu Törmänen - eetu.tormanen@haviexpress.fi</h3>
+    <h3> Viestintä- ja markkinointijohtaja - Minni Kautonen - minni.kautonen@haviexpress.fi</h3>
+</div>
+    </section>
+
+    <script>
+        function submitFeedback(event) {
+            event.preventDefault();
+            document.getElementById("feedbackForm").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+        }
+    </script>
+    <script src="../scripts.js"></script>
+</body>
+</html>
